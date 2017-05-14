@@ -3,6 +3,7 @@
 
 <hibernate-mapping default-lazy="false" auto-import="false">
 	<import class="com.inkwell.internet.producregistration.model.PRProduct" />
+	<import class="com.inkwell.internet.producregistration.model.PRUser" />
 	<class name="com.inkwell.internet.producregistration.model.impl.PRProductImpl" table="PR_PRProduct">
 		<cache usage="read-write" />
 		<id name="productId" type="long">
@@ -10,6 +11,27 @@
 		</id>
 		<property name="productName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="serialNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.inkwell.internet.producregistration.model.impl.PRUserImpl" table="PR_PRUser">
+		<cache usage="read-write" />
+		<id name="prUserId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="firstname" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="lastName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="address2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="city" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="state" type="com.liferay.portal.dao.orm.hibernate.StringType" column="state_" />
+		<property name="postalCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="country" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phoneNumber" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="birthDate" type="org.hibernate.type.TimestampType" />
+		<property name="male" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 	</class>

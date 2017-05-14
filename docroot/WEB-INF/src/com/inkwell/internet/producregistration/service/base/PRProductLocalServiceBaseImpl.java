@@ -17,6 +17,7 @@ package com.inkwell.internet.producregistration.service.base;
 import com.inkwell.internet.producregistration.model.PRProduct;
 import com.inkwell.internet.producregistration.service.PRProductLocalService;
 import com.inkwell.internet.producregistration.service.persistence.PRProductPersistence;
+import com.inkwell.internet.producregistration.service.persistence.PRUserPersistence;
 
 import com.liferay.portal.kernel.bean.BeanReference;
 import com.liferay.portal.kernel.bean.IdentifiableBean;
@@ -317,6 +318,43 @@ public abstract class PRProductLocalServiceBaseImpl extends BaseLocalServiceImpl
 	}
 
 	/**
+	 * Returns the p r user local service.
+	 *
+	 * @return the p r user local service
+	 */
+	public com.inkwell.internet.producregistration.service.PRUserLocalService getPRUserLocalService() {
+		return prUserLocalService;
+	}
+
+	/**
+	 * Sets the p r user local service.
+	 *
+	 * @param prUserLocalService the p r user local service
+	 */
+	public void setPRUserLocalService(
+		com.inkwell.internet.producregistration.service.PRUserLocalService prUserLocalService) {
+		this.prUserLocalService = prUserLocalService;
+	}
+
+	/**
+	 * Returns the p r user persistence.
+	 *
+	 * @return the p r user persistence
+	 */
+	public PRUserPersistence getPRUserPersistence() {
+		return prUserPersistence;
+	}
+
+	/**
+	 * Sets the p r user persistence.
+	 *
+	 * @param prUserPersistence the p r user persistence
+	 */
+	public void setPRUserPersistence(PRUserPersistence prUserPersistence) {
+		this.prUserPersistence = prUserPersistence;
+	}
+
+	/**
 	 * Returns the counter local service.
 	 *
 	 * @return the counter local service
@@ -496,6 +534,10 @@ public abstract class PRProductLocalServiceBaseImpl extends BaseLocalServiceImpl
 	protected com.inkwell.internet.producregistration.service.PRProductLocalService prProductLocalService;
 	@BeanReference(type = PRProductPersistence.class)
 	protected PRProductPersistence prProductPersistence;
+	@BeanReference(type = com.inkwell.internet.producregistration.service.PRUserLocalService.class)
+	protected com.inkwell.internet.producregistration.service.PRUserLocalService prUserLocalService;
+	@BeanReference(type = PRUserPersistence.class)
+	protected PRUserPersistence prUserPersistence;
 	@BeanReference(type = com.liferay.counter.service.CounterLocalService.class)
 	protected com.liferay.counter.service.CounterLocalService counterLocalService;
 	@BeanReference(type = com.liferay.portal.service.ResourceLocalService.class)

@@ -106,32 +106,32 @@ public class PRProductLocalServiceClpInvoker {
 				"com.inkwell.internet.producregistration.model.PRProduct"
 			};
 
-		_methodName32 = "getBeanIdentifier";
+		_methodName36 = "getBeanIdentifier";
 
-		_methodParameterTypes32 = new String[] {  };
+		_methodParameterTypes36 = new String[] {  };
 
-		_methodName33 = "setBeanIdentifier";
+		_methodName37 = "setBeanIdentifier";
 
-		_methodParameterTypes33 = new String[] { "java.lang.String" };
+		_methodParameterTypes37 = new String[] { "java.lang.String" };
 
-		_methodName38 = "getAllProducts";
+		_methodName42 = "getAllProducts";
 
-		_methodParameterTypes38 = new String[] { "long" };
+		_methodParameterTypes42 = new String[] { "long" };
 
-		_methodName39 = "addPRProduct";
+		_methodName43 = "addPRProduct";
 
-		_methodParameterTypes39 = new String[] {
+		_methodParameterTypes43 = new String[] {
 				"com.inkwell.internet.producregistration.model.PRProduct",
 				"long"
 			};
 
-		_methodName40 = "deleteProduct";
+		_methodName44 = "deleteProduct";
 
-		_methodParameterTypes40 = new String[] { "long" };
+		_methodParameterTypes44 = new String[] { "long" };
 
-		_methodName41 = "deleteProduct";
+		_methodName45 = "deleteProduct";
 
-		_methodParameterTypes41 = new String[] {
+		_methodParameterTypes45 = new String[] {
 				"com.inkwell.internet.producregistration.model.PRProduct"
 			};
 	}
@@ -225,38 +225,38 @@ public class PRProductLocalServiceClpInvoker {
 			return PRProductLocalServiceUtil.updatePRProduct((com.inkwell.internet.producregistration.model.PRProduct)arguments[0]);
 		}
 
-		if (_methodName32.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes32, parameterTypes)) {
+		if (_methodName36.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes36, parameterTypes)) {
 			return PRProductLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName33.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes33, parameterTypes)) {
+		if (_methodName37.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes37, parameterTypes)) {
 			PRProductLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName38.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes38, parameterTypes)) {
+		if (_methodName42.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes42, parameterTypes)) {
 			return PRProductLocalServiceUtil.getAllProducts(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName39.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes39, parameterTypes)) {
+		if (_methodName43.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes43, parameterTypes)) {
 			return PRProductLocalServiceUtil.addPRProduct((com.inkwell.internet.producregistration.model.PRProduct)arguments[0],
 				((Long)arguments[1]).longValue());
 		}
 
-		if (_methodName40.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes40, parameterTypes)) {
+		if (_methodName44.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes44, parameterTypes)) {
 			PRProductLocalServiceUtil.deleteProduct(((Long)arguments[0]).longValue());
 
 			return null;
 		}
 
-		if (_methodName41.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes41, parameterTypes)) {
+		if (_methodName45.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes45, parameterTypes)) {
 			PRProductLocalServiceUtil.deleteProduct((com.inkwell.internet.producregistration.model.PRProduct)arguments[0]);
 
 			return null;
@@ -297,16 +297,16 @@ public class PRProductLocalServiceClpInvoker {
 	private String[] _methodParameterTypes14;
 	private String _methodName15;
 	private String[] _methodParameterTypes15;
-	private String _methodName32;
-	private String[] _methodParameterTypes32;
-	private String _methodName33;
-	private String[] _methodParameterTypes33;
-	private String _methodName38;
-	private String[] _methodParameterTypes38;
-	private String _methodName39;
-	private String[] _methodParameterTypes39;
-	private String _methodName40;
-	private String[] _methodParameterTypes40;
-	private String _methodName41;
-	private String[] _methodParameterTypes41;
+	private String _methodName36;
+	private String[] _methodParameterTypes36;
+	private String _methodName37;
+	private String[] _methodParameterTypes37;
+	private String _methodName42;
+	private String[] _methodParameterTypes42;
+	private String _methodName43;
+	private String[] _methodParameterTypes43;
+	private String _methodName44;
+	private String[] _methodParameterTypes44;
+	private String _methodName45;
+	private String[] _methodParameterTypes45;
 }

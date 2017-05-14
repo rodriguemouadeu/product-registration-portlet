@@ -13,24 +13,65 @@
 		<order by="asc">
 			<order-column name="productName" />
 		</order>
-		
+
 		<finder return-type="Collection" name="G_PN">
 			<finder-column name="groupId" />
 			<finder-column name="productName" />
 		</finder>
-		
+
 		<finder return-type="Collection" name="GroupId">
 			<finder-column name="groupId" />
 		</finder>
-		
+
 		<finder return-type="Collection" name="CompanyId">
 			<finder-column name="companyId" />
 		</finder>
-	
-	<!-- 
-		<finder return-type="Collection" name="ProductId">
-			<finder-column name="productId" />
-		</finder>
-		 -->
+
+		<!-- <finder return-type="Collection" name="ProductId"> <finder-column 
+			name="productId" /> </finder> -->
 	</entity>
+
+	<entity name="PRUser" local-service="true" remote-service="false">
+		<column name="prUserId" type="long" primary="true" />
+		<column name="firstname" type="String" />
+		<column name="lastName" type="String" />
+		<column name="address1" type="String" />
+		<column name="address2" type="String" />
+		<column name="city" type="String" />
+		<column name="state" type="String" />
+		<column name="postalCode" type="String" />
+		<column name="country" type="String" />
+		<column name="phoneNumber" type="String" />
+		<column name="email" type="String" />
+		<column name="birthDate" type="Date" />
+		<column name="male" type="boolean" />
+		<column name="userId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userRegistrations" 
+			type="Collection" 
+			entity="PRRegistration"
+			mapping-key="prUserId" />
+	
+		<order by="asc">
+			<order-column name="lastName" case-sensitive="false" />
+		</order>
+	
+		<finder return-type="Collection" name="G_LN">
+			<finder-column name="groupId"/>
+			<finder-column name="lastName"/>
+		</finder>
+	
+		<finder return-type="Collection" name="G_E">
+			<finder-column name="groupId"/>
+			<finder-column name="email"/>
+		</finder>
+		
+		<finder return-type="Collection" name="G_U">
+			<finder-column name="groupId"/>
+			<finder-column name="userId"/>
+		</finder>
+	</entity>
+
+	
 </service-builder>

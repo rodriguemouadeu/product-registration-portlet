@@ -15,6 +15,7 @@
 package com.inkwell.internet.producregistration.service;
 
 import com.inkwell.internet.producregistration.model.PRProductClp;
+import com.inkwell.internet.producregistration.model.PRUserClp;
 
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
@@ -106,6 +107,10 @@ public class ClpSerializer {
 			return translateInputPRProduct(oldModel);
 		}
 
+		if (oldModelClassName.equals(PRUserClp.class.getName())) {
+			return translateInputPRUser(oldModel);
+		}
+
 		return oldModel;
 	}
 
@@ -125,6 +130,16 @@ public class ClpSerializer {
 		PRProductClp oldClpModel = (PRProductClp)oldModel;
 
 		BaseModel<?> newModel = oldClpModel.getPRProductRemoteModel();
+
+		newModel.setModelAttributes(oldClpModel.getModelAttributes());
+
+		return newModel;
+	}
+
+	public static Object translateInputPRUser(BaseModel<?> oldModel) {
+		PRUserClp oldClpModel = (PRUserClp)oldModel;
+
+		BaseModel<?> newModel = oldClpModel.getPRUserRemoteModel();
 
 		newModel.setModelAttributes(oldClpModel.getModelAttributes());
 
@@ -151,6 +166,43 @@ public class ClpSerializer {
 		if (oldModelClassName.equals(
 					"com.inkwell.internet.producregistration.model.impl.PRProductImpl")) {
 			return translateOutputPRProduct(oldModel);
+		}
+		else if (oldModelClassName.endsWith("Clp")) {
+			try {
+				ClassLoader classLoader = ClpSerializer.class.getClassLoader();
+
+				Method getClpSerializerClassMethod = oldModelClass.getMethod(
+						"getClpSerializerClass");
+
+				Class<?> oldClpSerializerClass = (Class<?>)getClpSerializerClassMethod.invoke(oldModel);
+
+				Class<?> newClpSerializerClass = classLoader.loadClass(oldClpSerializerClass.getName());
+
+				Method translateOutputMethod = newClpSerializerClass.getMethod("translateOutput",
+						BaseModel.class);
+
+				Class<?> oldModelModelClass = oldModel.getModelClass();
+
+				Method getRemoteModelMethod = oldModelClass.getMethod("get" +
+						oldModelModelClass.getSimpleName() + "RemoteModel");
+
+				Object oldRemoteModel = getRemoteModelMethod.invoke(oldModel);
+
+				BaseModel<?> newModel = (BaseModel<?>)translateOutputMethod.invoke(null,
+						oldRemoteModel);
+
+				return newModel;
+			}
+			catch (Throwable t) {
+				if (_log.isInfoEnabled()) {
+					_log.info("Unable to translate " + oldModelClassName, t);
+				}
+			}
+		}
+
+		if (oldModelClassName.equals(
+					"com.inkwell.internet.producregistration.model.impl.PRUserImpl")) {
+			return translateOutputPRUser(oldModel);
 		}
 		else if (oldModelClassName.endsWith("Clp")) {
 			try {
@@ -270,6 +322,11 @@ public class ClpSerializer {
 			return new com.inkwell.internet.producregistration.NoSuchProductException();
 		}
 
+		if (className.equals(
+					"com.inkwell.internet.producregistration.NoSuchUserException")) {
+			return new com.inkwell.internet.producregistration.NoSuchUserException();
+		}
+
 		return throwable;
 	}
 
@@ -279,6 +336,16 @@ public class ClpSerializer {
 		newModel.setModelAttributes(oldModel.getModelAttributes());
 
 		newModel.setPRProductRemoteModel(oldModel);
+
+		return newModel;
+	}
+
+	public static Object translateOutputPRUser(BaseModel<?> oldModel) {
+		PRUserClp newModel = new PRUserClp();
+
+		newModel.setModelAttributes(oldModel.getModelAttributes());
+
+		newModel.setPRUserRemoteModel(oldModel);
 
 		return newModel;
 	}
