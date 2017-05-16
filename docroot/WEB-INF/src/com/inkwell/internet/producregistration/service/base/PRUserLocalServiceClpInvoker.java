@@ -14,7 +14,7 @@
 
 package com.inkwell.internet.producregistration.service.base;
 
-import com.inkwell.internet.producregistration.service.PRProductLocalServiceUtil;
+import com.inkwell.internet.producregistration.service.PRUserLocalServiceUtil;
 
 import java.util.Arrays;
 
@@ -22,26 +22,26 @@ import java.util.Arrays;
  * @author Rich Sezov
  * @generated
  */
-public class PRProductLocalServiceClpInvoker {
-	public PRProductLocalServiceClpInvoker() {
-		_methodName0 = "addPRProduct";
+public class PRUserLocalServiceClpInvoker {
+	public PRUserLocalServiceClpInvoker() {
+		_methodName0 = "addPRUser";
 
 		_methodParameterTypes0 = new String[] {
-				"com.inkwell.internet.producregistration.model.PRProduct"
+				"com.inkwell.internet.producregistration.model.PRUser"
 			};
 
-		_methodName1 = "createPRProduct";
+		_methodName1 = "createPRUser";
 
 		_methodParameterTypes1 = new String[] { "long" };
 
-		_methodName2 = "deletePRProduct";
+		_methodName2 = "deletePRUser";
 
 		_methodParameterTypes2 = new String[] { "long" };
 
-		_methodName3 = "deletePRProduct";
+		_methodName3 = "deletePRUser";
 
 		_methodParameterTypes3 = new String[] {
-				"com.inkwell.internet.producregistration.model.PRProduct"
+				"com.inkwell.internet.producregistration.model.PRUser"
 			};
 
 		_methodName4 = "dynamicQuery";
@@ -80,11 +80,11 @@ public class PRProductLocalServiceClpInvoker {
 				"com.liferay.portal.kernel.dao.orm.Projection"
 			};
 
-		_methodName10 = "fetchPRProduct";
+		_methodName10 = "fetchPRUser";
 
 		_methodParameterTypes10 = new String[] { "long" };
 
-		_methodName11 = "getPRProduct";
+		_methodName11 = "getPRUser";
 
 		_methodParameterTypes11 = new String[] { "long" };
 
@@ -92,18 +92,18 @@ public class PRProductLocalServiceClpInvoker {
 
 		_methodParameterTypes12 = new String[] { "java.io.Serializable" };
 
-		_methodName13 = "getPRProducts";
+		_methodName13 = "getPRUsers";
 
 		_methodParameterTypes13 = new String[] { "int", "int" };
 
-		_methodName14 = "getPRProductsCount";
+		_methodName14 = "getPRUsersCount";
 
 		_methodParameterTypes14 = new String[] {  };
 
-		_methodName15 = "updatePRProduct";
+		_methodName15 = "updatePRUser";
 
 		_methodParameterTypes15 = new String[] {
-				"com.inkwell.internet.producregistration.model.PRProduct"
+				"com.inkwell.internet.producregistration.model.PRUser"
 			};
 
 		_methodName40 = "getBeanIdentifier";
@@ -114,25 +114,10 @@ public class PRProductLocalServiceClpInvoker {
 
 		_methodParameterTypes41 = new String[] { "java.lang.String" };
 
-		_methodName46 = "getAllProducts";
+		_methodName46 = "addPRUser";
 
-		_methodParameterTypes46 = new String[] { "long" };
-
-		_methodName47 = "addPRProduct";
-
-		_methodParameterTypes47 = new String[] {
-				"com.inkwell.internet.producregistration.model.PRProduct",
-				"long"
-			};
-
-		_methodName48 = "deleteProduct";
-
-		_methodParameterTypes48 = new String[] { "long" };
-
-		_methodName49 = "deleteProduct";
-
-		_methodParameterTypes49 = new String[] {
-				"com.inkwell.internet.producregistration.model.PRProduct"
+		_methodParameterTypes46 = new String[] {
+				"com.inkwell.internet.producregistration.model.PRUser", "long"
 			};
 	}
 
@@ -140,44 +125,44 @@ public class PRProductLocalServiceClpInvoker {
 		Object[] arguments) throws Throwable {
 		if (_methodName0.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes0, parameterTypes)) {
-			return PRProductLocalServiceUtil.addPRProduct((com.inkwell.internet.producregistration.model.PRProduct)arguments[0]);
+			return PRUserLocalServiceUtil.addPRUser((com.inkwell.internet.producregistration.model.PRUser)arguments[0]);
 		}
 
 		if (_methodName1.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes1, parameterTypes)) {
-			return PRProductLocalServiceUtil.createPRProduct(((Long)arguments[0]).longValue());
+			return PRUserLocalServiceUtil.createPRUser(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName2.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes2, parameterTypes)) {
-			return PRProductLocalServiceUtil.deletePRProduct(((Long)arguments[0]).longValue());
+			return PRUserLocalServiceUtil.deletePRUser(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName3.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes3, parameterTypes)) {
-			return PRProductLocalServiceUtil.deletePRProduct((com.inkwell.internet.producregistration.model.PRProduct)arguments[0]);
+			return PRUserLocalServiceUtil.deletePRUser((com.inkwell.internet.producregistration.model.PRUser)arguments[0]);
 		}
 
 		if (_methodName4.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes4, parameterTypes)) {
-			return PRProductLocalServiceUtil.dynamicQuery();
+			return PRUserLocalServiceUtil.dynamicQuery();
 		}
 
 		if (_methodName5.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes5, parameterTypes)) {
-			return PRProductLocalServiceUtil.dynamicQuery((com.liferay.portal.kernel.dao.orm.DynamicQuery)arguments[0]);
+			return PRUserLocalServiceUtil.dynamicQuery((com.liferay.portal.kernel.dao.orm.DynamicQuery)arguments[0]);
 		}
 
 		if (_methodName6.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes6, parameterTypes)) {
-			return PRProductLocalServiceUtil.dynamicQuery((com.liferay.portal.kernel.dao.orm.DynamicQuery)arguments[0],
+			return PRUserLocalServiceUtil.dynamicQuery((com.liferay.portal.kernel.dao.orm.DynamicQuery)arguments[0],
 				((Integer)arguments[1]).intValue(),
 				((Integer)arguments[2]).intValue());
 		}
 
 		if (_methodName7.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes7, parameterTypes)) {
-			return PRProductLocalServiceUtil.dynamicQuery((com.liferay.portal.kernel.dao.orm.DynamicQuery)arguments[0],
+			return PRUserLocalServiceUtil.dynamicQuery((com.liferay.portal.kernel.dao.orm.DynamicQuery)arguments[0],
 				((Integer)arguments[1]).intValue(),
 				((Integer)arguments[2]).intValue(),
 				(com.liferay.portal.kernel.util.OrderByComparator)arguments[3]);
@@ -185,81 +170,62 @@ public class PRProductLocalServiceClpInvoker {
 
 		if (_methodName8.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes8, parameterTypes)) {
-			return PRProductLocalServiceUtil.dynamicQueryCount((com.liferay.portal.kernel.dao.orm.DynamicQuery)arguments[0]);
+			return PRUserLocalServiceUtil.dynamicQueryCount((com.liferay.portal.kernel.dao.orm.DynamicQuery)arguments[0]);
 		}
 
 		if (_methodName9.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes9, parameterTypes)) {
-			return PRProductLocalServiceUtil.dynamicQueryCount((com.liferay.portal.kernel.dao.orm.DynamicQuery)arguments[0],
+			return PRUserLocalServiceUtil.dynamicQueryCount((com.liferay.portal.kernel.dao.orm.DynamicQuery)arguments[0],
 				(com.liferay.portal.kernel.dao.orm.Projection)arguments[1]);
 		}
 
 		if (_methodName10.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes10, parameterTypes)) {
-			return PRProductLocalServiceUtil.fetchPRProduct(((Long)arguments[0]).longValue());
+			return PRUserLocalServiceUtil.fetchPRUser(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName11.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes11, parameterTypes)) {
-			return PRProductLocalServiceUtil.getPRProduct(((Long)arguments[0]).longValue());
+			return PRUserLocalServiceUtil.getPRUser(((Long)arguments[0]).longValue());
 		}
 
 		if (_methodName12.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes12, parameterTypes)) {
-			return PRProductLocalServiceUtil.getPersistedModel((java.io.Serializable)arguments[0]);
+			return PRUserLocalServiceUtil.getPersistedModel((java.io.Serializable)arguments[0]);
 		}
 
 		if (_methodName13.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes13, parameterTypes)) {
-			return PRProductLocalServiceUtil.getPRProducts(((Integer)arguments[0]).intValue(),
+			return PRUserLocalServiceUtil.getPRUsers(((Integer)arguments[0]).intValue(),
 				((Integer)arguments[1]).intValue());
 		}
 
 		if (_methodName14.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes14, parameterTypes)) {
-			return PRProductLocalServiceUtil.getPRProductsCount();
+			return PRUserLocalServiceUtil.getPRUsersCount();
 		}
 
 		if (_methodName15.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes15, parameterTypes)) {
-			return PRProductLocalServiceUtil.updatePRProduct((com.inkwell.internet.producregistration.model.PRProduct)arguments[0]);
+			return PRUserLocalServiceUtil.updatePRUser((com.inkwell.internet.producregistration.model.PRUser)arguments[0]);
 		}
 
 		if (_methodName40.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes40, parameterTypes)) {
-			return PRProductLocalServiceUtil.getBeanIdentifier();
+			return PRUserLocalServiceUtil.getBeanIdentifier();
 		}
 
 		if (_methodName41.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes41, parameterTypes)) {
-			PRProductLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
+			PRUserLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
 		if (_methodName46.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes46, parameterTypes)) {
-			return PRProductLocalServiceUtil.getAllProducts(((Long)arguments[0]).longValue());
-		}
-
-		if (_methodName47.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes47, parameterTypes)) {
-			return PRProductLocalServiceUtil.addPRProduct((com.inkwell.internet.producregistration.model.PRProduct)arguments[0],
+			return PRUserLocalServiceUtil.addPRUser((com.inkwell.internet.producregistration.model.PRUser)arguments[0],
 				((Long)arguments[1]).longValue());
-		}
-
-		if (_methodName48.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes48, parameterTypes)) {
-			PRProductLocalServiceUtil.deleteProduct(((Long)arguments[0]).longValue());
-
-			return null;
-		}
-
-		if (_methodName49.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes49, parameterTypes)) {
-			PRProductLocalServiceUtil.deleteProduct((com.inkwell.internet.producregistration.model.PRProduct)arguments[0]);
-
-			return null;
 		}
 
 		throw new UnsupportedOperationException();
@@ -303,10 +269,4 @@ public class PRProductLocalServiceClpInvoker {
 	private String[] _methodParameterTypes41;
 	private String _methodName46;
 	private String[] _methodParameterTypes46;
-	private String _methodName47;
-	private String[] _methodParameterTypes47;
-	private String _methodName48;
-	private String[] _methodParameterTypes48;
-	private String _methodName49;
-	private String[] _methodParameterTypes49;
 }

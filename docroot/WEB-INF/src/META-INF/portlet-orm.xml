@@ -19,6 +19,25 @@
 			<transient name="primaryKeyObj" />
 		</attributes>
 	</mapped-superclass>
+	<mapped-superclass class="com.inkwell.internet.producregistration.model.impl.PRRegistrationModelImpl">
+		<attributes>
+			<id name="registrationId" />
+			<basic name="prUserId" />
+			<basic name="datePurchased">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="howHear" />
+			<basic name="wherePurchased" />
+			<basic name="serialNumber" />
+			<basic name="productId" />
+			<basic name="companyId" />
+			<basic name="groupId" />
+			<transient name="modelAttributes" />
+			<transient name="prUserUuid" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
 	<mapped-superclass class="com.inkwell.internet.producregistration.model.impl.PRUserModelImpl">
 		<attributes>
 			<id name="prUserId" />
@@ -50,6 +69,10 @@
 	</mapped-superclass>
 	<entity class="com.inkwell.internet.producregistration.model.impl.PRProductImpl" name="PRProduct">
 		<table name="PR_PRProduct" />
+		<attributes />
+	</entity>
+	<entity class="com.inkwell.internet.producregistration.model.impl.PRRegistrationImpl" name="PRRegistration">
+		<table name="PR_PRRegistration" />
 		<attributes />
 	</entity>
 	<entity class="com.inkwell.internet.producregistration.model.impl.PRUserImpl" name="PRUser">

@@ -73,5 +73,36 @@
 		</finder>
 	</entity>
 
+	<entity name="PRRegistration" local-service="true" remote-service="false">
+		<column name="registrationId" type="long" primary="true"/>
+		<column name="prUserId" type="long"/>
+		<column name="datePurchased" type="Date"/>
+		<column name="howHear" type="String"/>
+		<column name="wherePurchased" type="String"/>
+		<column name="serialNumber" type="String"/>
+		<column name="productId" type="long"/>
+		<column name="companyId" type="long"/>
+		<column name="groupId" type="long"/>
+		
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId"/>
+		</finder>
+		
+		<finder return-type="Collection" name="G_RU">
+			<finder-column name="groupId"/>
+			<finder-column name="prUserId"/>
+		</finder>
+		
+		<finder return-type="Collection" name="G_DP">
+			<finder-column name="groupId"/>
+			<finder-column name="datePurchased"/>
+		</finder>
+		
+		<finder return-type="Collection" name="G_SN">
+			<finder-column name="groupId"/>
+			<finder-column name="serialNumber"/>
+		</finder>
+		
+	</entity>
 	
 </service-builder>

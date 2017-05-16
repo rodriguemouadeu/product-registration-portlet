@@ -8,6 +8,17 @@
 		<field name="companyId" type="long" />
 		<field name="groupId" type="long" />
 	</model>
+	<model name="com.inkwell.internet.producregistration.model.PRRegistration">
+		<field name="registrationId" type="long" />
+		<field name="prUserId" type="long" />
+		<field name="datePurchased" type="Date" />
+		<field name="howHear" type="String" />
+		<field name="wherePurchased" type="String" />
+		<field name="serialNumber" type="String" />
+		<field name="productId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="groupId" type="long" />
+	</model>
 	<model name="com.inkwell.internet.producregistration.model.PRUser">
 		<field name="prUserId" type="long" />
 		<field name="firstname" type="String" />

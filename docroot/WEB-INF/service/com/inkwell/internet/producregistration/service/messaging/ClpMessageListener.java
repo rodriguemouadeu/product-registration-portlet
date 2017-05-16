@@ -16,6 +16,7 @@ package com.inkwell.internet.producregistration.service.messaging;
 
 import com.inkwell.internet.producregistration.service.ClpSerializer;
 import com.inkwell.internet.producregistration.service.PRProductLocalServiceUtil;
+import com.inkwell.internet.producregistration.service.PRRegistrationLocalServiceUtil;
 import com.inkwell.internet.producregistration.service.PRUserLocalServiceUtil;
 
 import com.liferay.portal.kernel.messaging.BaseMessageListener;
@@ -37,6 +38,8 @@ public class ClpMessageListener extends BaseMessageListener {
 		if (command.equals("undeploy") &&
 				servletContextName.equals(getServletContextName())) {
 			PRProductLocalServiceUtil.clearService();
+
+			PRRegistrationLocalServiceUtil.clearService();
 
 			PRUserLocalServiceUtil.clearService();
 		}
