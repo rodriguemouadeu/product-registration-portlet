@@ -5,4 +5,10 @@
 	<category name="category.sample">
 		<portlet id="product-registration" />
 	</category>
+    <category name="Inkwell Internet">
+    	<portlet id="product-registration"/>
+    </category>
+    <category name="category.hidden">
+    </category>
+
 </display>

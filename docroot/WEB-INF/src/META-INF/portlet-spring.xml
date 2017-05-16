@@ -7,4 +7,10 @@
 	<bean id="com.inkwell.internet.producregistration.service.persistence.PRRegistrationPersistence" class="com.inkwell.internet.producregistration.service.persistence.PRRegistrationPersistenceImpl" parent="basePersistence" />
 	<bean id="com.inkwell.internet.producregistration.service.PRUserLocalService" class="com.inkwell.internet.producregistration.service.impl.PRUserLocalServiceImpl" />
 	<bean id="com.inkwell.internet.producregistration.service.persistence.PRUserPersistence" class="com.inkwell.internet.producregistration.service.persistence.PRUserPersistenceImpl" parent="basePersistence" />
+	<bean id="com.inkwell.internet.productregistration.service.PRProductLocalService" class="com.inkwell.internet.productregistration.service.impl.PRProductLocalServiceImpl" />
+	<bean id="com.inkwell.internet.productregistration.service.persistence.PRProductPersistence" class="com.inkwell.internet.productregistration.service.persistence.PRProductPersistenceImpl" parent="basePersistence" />
+	<bean id="com.inkwell.internet.productregistration.service.PRRegistrationLocalService" class="com.inkwell.internet.productregistration.service.impl.PRRegistrationLocalServiceImpl" />
+	<bean id="com.inkwell.internet.productregistration.service.persistence.PRRegistrationPersistence" class="com.inkwell.internet.productregistration.service.persistence.PRRegistrationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.inkwell.internet.productregistration.service.PRUserLocalService" class="com.inkwell.internet.productregistration.service.impl.PRUserLocalServiceImpl" />
+	<bean id="com.inkwell.internet.productregistration.service.persistence.PRUserPersistence" class="com.inkwell.internet.productregistration.service.persistence.PRUserPersistenceImpl" parent="basePersistence" />
 </beans>
