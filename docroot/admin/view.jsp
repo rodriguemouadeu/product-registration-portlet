@@ -13,7 +13,7 @@
  * details.
  */
 %>
-
+<%@include file="/init.jsp" %>
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 
 <portlet:defineObjects />
@@ -22,8 +22,8 @@
 
 <aui:form action="<%= addProductURL.toString() %>" method="post">
 	<liferay-ui:success key="product-saved" message="product-saved-successfully"/>
-	<liferay-ui:success key="productDeleted" message="product-deleted"/>
-	<liferay-ui:success key="productUpdated" message="product-updated"/>
+	<liferay-ui:success key="productDeleted" message="productDeleted"/>
+	<liferay-ui:success key="productUpdated" message="productUpdated"/>
 	<liferay-ui:error key="fields-required" message="fields-required"/>
 	<liferay-ui:error key="error-deleting" message="error-deleting"/>
 	<liferay-ui:error key="error-updating" message="error-updating"/>
